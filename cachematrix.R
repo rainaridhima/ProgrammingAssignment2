@@ -1,4 +1,8 @@
 ## There are 2 functions that create a cache to store the inverse of a matrix and retrieve it whenever needed. If the value is not present in the cache, then we calculate it and store it in the cache.
+## You can use this input to test:
+## test <- makeCacheMatrix(matrix(c(3,1,2,1),nrow=2,ncol=2))
+## cacheSolve(test)
+
 
 ## This function is used to store and retrieve the matrix and it's inverse.
 makeCacheMatrix <- function (x = numeric())
@@ -44,7 +48,6 @@ cacheSolve <- function(mymatrix)
     data <- solve(mymatrix$get())
     mymatrix$setsolve(data)
     print(S)
-    ##print(data)
   }
  
 }
